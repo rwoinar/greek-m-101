@@ -73,14 +73,6 @@ window.addEventListener('load', () => {
     select.addEventListener('change', () => {
         if(select.value == 'other'){
             document.getElementById('inputOther').style.display = 'block';
-//            const newForm = document.createElement('form');
-//            const newInput = document.createElement('input');
-//            newInput.setAttribute('type', 'text');
-//
-//            newForm.appendChild(newInput);
-//            let child = document.getElementById('faveSubmit');
-//            let parent = child.parentNode;
-//            parent.insertBefore(newForm, child);
         }
         else {
             document.getElementById('inputOther').style.display = 'none';
