@@ -1,11 +1,14 @@
 window.addEventListener('load', () => {
+
+    let main = document.getElementById('main-page');
     let isDarkModeEnabled = false;
-
     let tooltip = document.getElementById('tooltip');
-
     let select = document.getElementById('select');
-
     let selectForm = document.getElementById('faveGod');
+    let comment = document.getElementById('textarea');
+    let submitComment = document.getElementById('submit');
+    let infoBox = document.getElementById('info');
+    let userName = document.getElementById('username')
 
     let titluPrincipal = {
         titlu: 'Greek Mythology 101',
@@ -17,7 +20,22 @@ window.addEventListener('load', () => {
         }
 
     }
-    
+
+    function createDiv(){
+        newDiv = document.createElement('div');
+        newDivClass = document.createAttribute('class');
+        newDivClass.value = 'comment';
+        newDiv.setAttributeNode(newDivClass);
+        user = userName.value;
+        commentContent = document.createTextNode(comment.value)
+        linebreak = document.createElement('br')
+        newDiv.innerHTML = user + ':'
+        newDiv.appendChild(linebreak)
+        newDiv.appendChild(linebreak.cloneNode(true))
+        newDiv.appendChild(commentContent)
+        return newDiv;
+    }
+
     function darkLinkH3(a, h3) {
         a.classList.toggle('dark-a');
         h3.classList.toggle('dark-h3');
@@ -70,6 +88,13 @@ window.addEventListener('load', () => {
 
     })
 
+    submitComment.addEventListener('click', () => {
+        newComment = createDiv();
+        main.insertBefore(newComment, infoBox);
+        comment.value = '';
+        userName.value = ''
+    })
+
     select.addEventListener('change', () => {
         if(select.value == 'other'){
             document.getElementById('inputOther').style.display = 'block';
@@ -78,6 +103,4 @@ window.addEventListener('load', () => {
             document.getElementById('inputOther').style.display = 'none';
         }
     })
-
-    //added from vscode
 })

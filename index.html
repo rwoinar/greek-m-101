@@ -1,4 +1,4 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!DOCTYPE HTML>
 <html>
     <head>
         <link href="Greek_Mytho_101.css" rel="stylesheet">
@@ -6,7 +6,7 @@
         <META http-equiv="Content-Type" content="text/html; charset=utf-8">
         <title>Greek Mytho 101</title>
         <style></style>
-        <script src="Greek_Mytho _101.js"></script>
+        <script src="Greek_Mytho_101.js"></script>
     </head>
     <body id="body">
         <div class="banners">
@@ -88,12 +88,14 @@
                     </p>
                 </div>
                 <div id="parent">
-                    <form>
+                    <form class="addComment" id="addComment">
                         <label>Anything to add? Share it in the comments!</label>
                         <br>
-                        <textarea rows="7" cols="0" class="writeHere"></textarea>
+                        <input type="text" id="username" class="username" placeholder="Enter Username...">
+                        <br>
+                        <textarea rows="7" cols="0" class="writeHere" id="textarea" placeholder="Type comment..."></textarea>
                         <br><br>
-                        <button type="button" class="submit">Submit</button>
+                        <button type="button" id="submit" class="submit">Submit</button>
                     </form>
                     <form id="faveGod">
                         <label>What's your favourite deity?</label>
@@ -114,9 +116,8 @@
                             <option value="apollo">Apollo</option>
                             <option value="other">Other</option>
                         </select>
-                        <input type="submit" id="faveSubmit" class="submit">
+                        <input type="submit" id="faveSubmit" class="faveSsubmit">
                         <input type="text" id="inputOther">
-
                     </form>
                 </div>
                 <span id="info" class="info">

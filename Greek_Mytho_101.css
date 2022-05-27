@@ -216,9 +216,22 @@ form{
     background-color: #d8bfaa;
     border:1px solid #542344;
 }
+.faveSumbit{
+    color:#542344;
+    background-color: #d8bfaa;
+    border:1px solid #542344;
+}
 .writeHere{
     margin-top:5px;
     padding-left:none;
+}
+.comment{
+    font-size: 15px;
+    border: 1px solid #542344;
+    padding:5px;
+    margin-top: 20px;
+    margin-left: 5px;
+    word-break: break-word;
 }
 a {
     text-decoration: none;
